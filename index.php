@@ -4,3 +4,6 @@
 
 $var = "asdasd";
 &var ="werewr"
+
+    echo($var);
+?>
