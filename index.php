@@ -1,11 +1,12 @@
 <?php 
      
-     echo ("Hello world");
+     echo ("Hello GitHub");
+     print("<br>");
+$var = "I am work!!";
 
-$var = "asdasd";
-$var ="werewr";
 
     echo($var);
 
 
+?>
 
