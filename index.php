@@ -3,10 +3,9 @@
      echo ("Hello world");
 
 $var = "asdasd";
-&var ="werewr"
+$var ="werewr";
 
     echo($var);
 
 
 
-?>
