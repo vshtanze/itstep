@@ -17,8 +17,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Main news portal</title>
-    <!--<link href="Content/Css/Bootstrap/bootstrap.min.css" rel="stylesheet">-->
-    <!--<link href="Content/Css/MyCss/Main.css" rel="stylesheet">-->
+    <link href="Content/Css/Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/Css/MyCss/Main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -260,7 +260,9 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="Content/JavaScript/jquery/jquery-1.10.2.min.map"></script>
+<script src="Content/JavaScript/Bootstrap/bootstrap.min.js"></script>
+<script src="Content/JavaScript/MyJavaScript/jsMain.js"></script>
 </body>
 </html>
 
