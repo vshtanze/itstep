@@ -251,7 +251,7 @@
 
     <hr>
     <footer>
-        <p>&copy; itstem 2017 </p>
+        <p>&copy; itstep 2017 </p>
     </footer>
 </div> <!-- /container -->
 
