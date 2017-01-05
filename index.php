@@ -2,11 +2,7 @@
      
      echo ("Hello GitHub");
      print("<br>");
-$var = "I am work!!";
-
-
-    echo($var);
-
-
+     $var = "I am work!!";
+     echo($var);
 ?>
 
