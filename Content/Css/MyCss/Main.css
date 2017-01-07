@@ -1,0 +1,131 @@
+body{
+    background: #f5f5f5;
+
+}
+
+
+.news-header{
+border-bottom: 2px solid #000000;
+}
+
+.news-header-in{
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: #000000;
+}
+.news-header span{
+   color: #ffffff;
+}
+.top-news{
+    height: 300px;
+}
+.top-news, .left-news{
+    border: 2px solid #808080;
+    border-radius:3px ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 10px;
+}
+.top-news-empty{
+    height: 100px;
+}
+
+.top-news:hover{
+    background-size: 105%;
+    background-position: center;
+    cursor: pointer;
+}
+
+.jumbotron{
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 2px;
+
+}
+
+.name{
+    margin-top:20px;
+    font-style: normal;
+    font-size: 30px;
+    border-right: 3px solid;
+    line-height: 30px;
+}
+
+.advertising{
+    font-style: italic;
+    border: 1px solid;
+    text-align: center;
+}
+
+.container-hot-news{
+    padding-bottom: 10px;
+}
+
+.container-news{
+    margin-top: 40px;
+    height: 460px;
+}
+.left-news{
+    height: 400px;
+}
+
+.left-news:hover{
+    cursor: pointer;
+    background-size: 105%;
+    background-position: center;
+}
+.left-news-empty{
+    height: 200px;
+}
+
+.new-right-name:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+/*.right-news div{*/
+    /*margin: 10px;*/
+/*}*/
+.row{
+    margin: 10px;
+}
+.right-news img{
+    width: 120px;
+    height: 120px;
+    float: left;
+    clear: both;
+}
+
+.head-block,.name,.content-head{
+    padding: 10px;
+}
+.head-block{
+    line-height: 90px;
+}
+
+hr{
+    border-bottom: 4px solid #000000;
+    color: #000000;
+}
+footer{
+    text-align: center;
+}
+
+.content-head{
+    border-bottom: 3px solid #000000;
+}
+.headline{
+    margin-top: 20px;
+}
+
+.headline li{
+     width: 140px;
+ }
+.headline li span{
+    font-style: italic;
+    color: #101010;
+}
+.headline li:hover{
+    border-bottom: 2px solid #777777;
+}
