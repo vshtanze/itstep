@@ -4,7 +4,7 @@
 var adressOneNews="http://itstep:81/TestNews.php?id=";
 
 $(document).ready(function(){
-    $(".top-news").click(
+    $(".click").click(
         function(el){
             var str=adressOneNews+el.currentTarget.id;
             $(location).attr('href',str);}

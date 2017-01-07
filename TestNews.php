@@ -5,5 +5,13 @@
  * Date: 05.01.17
  * Time: 20:14
  */
- echo('test');
-  echo ($_GET["id"]);
+
+function clearId($id){
+    $var=str_replace("hot",'',$id);
+    return $var;
+}
+
+ $idNews=clearId($_GET["id"]);
+
+
+echo($idNews);

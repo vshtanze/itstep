@@ -1,9 +1,7 @@
 <?php 
-     
-     echo ("Hello GitHub");
-     print("<br>");
-     $var = "I am work!!";
-     echo($var);
+    include 'ModelNews.php';
+
+
 ?>
 
 
@@ -79,10 +77,10 @@
                         <li><a href="#Country"><span>Country</span></a></li>
                         <li><a href="#Economic"><span>Economic</span></a></li>
                         <li><a href="#Politic"><span>Politic</span></a></li>
-                        <li><a href="#about"><span>Social</span></a></li>
-                        <li><a href="#contact"><span>Sport</span></a></li>
-                        <li><a href="#contact"><span>Weather</span></a></li>
-                        <li><a href="#contact"><span>Other</span></a></li>
+                        <li><a href="#Social"><span>Social</span></a></li>
+                        <li><a href="#Sport"><span>Sport</span></a></li>
+                        <li><a href="#Weather"><span>Weather</span></a></li>
+                        <li><a href="#Other"><span>Other</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -94,154 +92,54 @@
     <div class="container-hot-news">
         <div class="row">
             <div class="col-md-6">
-                <div id="topNew1" class="top-news" style="background-image:url('img/images (1).jpg') ">
+                <div id="<?php getIdHot($hot[0]); ?>" class="top-news click" style="background-image:url('<?php getImg($hot[0]); ?>') ">
                     <div class="top-news-empty"></div>
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <h2><?php echo($hot[0]['Ns_Name']) ; ?></h2>
+                    <p><?php echo($hot[0]['Ns_Header']) ; ?></p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div id="topNew2" class="top-news" style="background-image:url('img/images.jpg') ">
+                <div id="<?php getIdHot($hot[1]); ?>" class="top-news click" style="background-image:url('<?php getImg($hot[1]); ?>') ">
                     <div class="top-news-empty"></div>
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <h2><?php echo($hot[1]['Ns_Name']) ; ?></h2>
+                    <p><?php echo($hot[1]['Ns_Header']) ; ?></p>
                 </div>
             </div>
         </div>
 
+
+<?php    foreach($resurse->getCategory() as $value){
+      $news=$resurse->getNews($value['Ct_Id']);
+        ?>
         <div class="container-news">
-            <div id="Main" class="news-header">
-                <div class="news-header-in"><span>Main</span></div>
+            <div id="<?php echo($value['Ct_Name']) ; ?>" class="news-header">
+                <div class="news-header-in"><span><?php echo($value['Ct_Name']); ?></span></div>
             </div>
-            <div class="row">
+                <div class="row">
                 <div class="col-sm-5">
-                    <div class="left-news" style="background-image:url('img/images (13).jpg')">
+                    <div id="<?php echo($news[0]['Ns_Id'])  ?>" class="left-news click" style="background-image:url('<?php getImg($news[0]); ?>')">
                         <div class="left-news-empty"></div>
-                        <h3>Name</h3>
-                        <p>yrtrtreterertertertertertertert</p>
+                        <h3><?php echo($news[0]['Ns_Name']); ?></h3>
+                        <p><?php echo($news[0]['Ns_Header']); ?></p>
                     </div>
                 </div>
+
                 <div class="col-lg-7 right-news">
+                    <?php for($i=1;$i<4;$i++){   ?>
                     <div class="row">
                         <div class="col-sm-3">
-                            <img src="img/images%20(16).jpg ">
+                            <img src="<?php getImg($news[$i]); ?>">
                         </div>
                         <div class="col-lg-9">
-                            <span>Name</span>
+                            <span id="<?php echo($news[$i]["Ns_Id"]); ?>" class="new-right-name click"><?php echo($news[$i]['Ns_Name']); ?></span>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <img src="img/images%20(17).jpg ">
-                        </div>
-                        <div class="col-lg-9">
-                            <span>Name</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <img src="img/images%20(18).jpg ">
-                        </div>
-                        <div class="col-lg-9">
-                            <span>Name</span>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
-        <div class="container-news">
-            <div id="Country" class="news-header"><div class="news-header-in"><span>Country</span></div></div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="left-news" style="background-image:url('img/images (2).jpg')"><h1>1</h1></div>
-                </div>
-                <div class="col-lg-7">
-                    <div><h1>1</h1></div>
-                    <div><h1>2</h1></div>
-                    <div><h1>3</h1></div>
-                </div>
-            </div>
-        </div>
-        <div class="container-news">
-            <div id="Economic" class="news-header"><div class="news-header-in"><span>Economic</span></div></div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="left-news" style="background-image:url('img/images (2).jpg')"><h1>1</h1></div>
-                </div>
-                <div class="col-lg-7">
-                    <div><h1>1</h1></div>
-                    <div><h1>2</h1></div>
-                    <div><h1>3</h1></div>
-                </div>
-            </div>
-        </div>
-        <div class="container-news">
-            <div id="Politic" class="news-header"><div class="news-header-in"><span>Politic</span></div></div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="left-news" style="background-image:url('img/images (2).jpg')"><h1>1</h1></div>
-                </div>
-                <div class="col-lg-7">
-                    <div><h1>1</h1></div>
-                    <div><h1>2</h1></div>
-                    <div><h1>3</h1></div>
-                </div>
-            </div>
-        </div>
-        <div class="container-news">
-            <div id="Social" class="news-header" ><div class="news-header-in"><span>Social</span></div></div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="left-news" style="background-image:url('img/images (2).jpg')">
-                        <h1>1</h1>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div><h1>1</h1></div>
-                    <div><h1>2</h1></div>
-                    <div><h1>3</h1></div>
-                </div>
-            </div>
-        </div>
-        <div class="container-news">
-            <div id="Sport" class="news-header"><div class="news-header-in"><span>Sport</span></div></div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="left-news" style="background-image:url('img/images (2).jpg')"><h1>1</h1></div>
-                </div>
-                <div class="col-lg-7">
-                    <div><h1>1</h1></div>
-                    <div><h1>2</h1></div>
-                    <div><h1>3</h1></div>
-                </div>
-            </div>
-        </div>
-        <div class="container-news">
-            <div id="Weather" class="news-header"><div class="news-header-in"><span>Weather</span></div></div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="left-news" style="background-image:url('img/images (2).jpg')"><h1>1</h1></div>
-                </div>
-                <div class="col-lg-7">
-                    <div><h1>1</h1></div>
-                    <div><h1>2</h1></div>
-                    <div><h1>3</h1></div>
-                </div>
-            </div>
-        </div>
-        <div class="container-news">
-            <div id="Other" class="news-header"><div class="news-header-in"><span>Other</span></div></div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="left-news" style="background-image:url('img/images (2).jpg')"><h1>1</h1></div>
-                </div>
-                <div class="col-lg-7">
-                    <div><h1>1</h1></div>
-                    <div><h1>2</h1></div>
-                    <div><h1>3</h1></div>
-                </div>
-            </div>
-        </div>
+
+<?php  }?>
 
     </div>
 
@@ -253,7 +151,7 @@
     <footer>
         <p>&copy; itstep 2017 </p>
     </footer>
-</div> <!-- /container -->
+</div>
 
 
 <!-- Bootstrap core JavaScript
